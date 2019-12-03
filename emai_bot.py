@@ -32,8 +32,8 @@ mail_fact = (fact.find('p'))
 examples = soup.find('div', attrs = {'class' : 'wotd-examples'})
 mail_examples = examples.find_all('p')
 
-sender = 'purpleslove2@gmail.com'
-pswd = 'Pl@1010%'
+sender = 'sendersemail@gmail.com'
+pswd = 'senders password'
 
 yag  = yagmail.SMTP(sender, pswd)
 
@@ -41,4 +41,4 @@ contents = f'''<html><body><h1><b>{mail_word}</b></h1><br><h2>Definition<br>{mai
 
 
 
-yag.send(['nkispurple@gmail.com', 'laura.potier37@gmail.com'], mail_subj, contents)
+yag.send(['receiver1@gmail.com', 'receiver2@gmail.com'], mail_subj, contents)
